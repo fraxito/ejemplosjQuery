@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-1.12.0.min.js"></script>
+        <script>
+            function borra(){
+                $('#mensaje').fadeToggle(400);
+            }
+            function agrega(){
+                $('#mensaje').after("<h2> soy otra etiqueta!</h2>");
+            }   
+            function quita(){
+                $('#mensaje').remove();
+            }
+            function cambia(){
+                $('h2, #mensaje').css(
+                {
+                    "background-color": "#FFC107",
+                    "color":"#008000"
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="ejemplo jQuery" onclick="borra();"/>
+        <input type="button" value="añade elemento" onclick="agrega();"/>
+        <input type="button" value="quita elemento" onclick="quita();"/>
+        <input type="button" value="cambia h2" onclick="cambia();"/>
+        
+        <div id="mensaje">
+            <h1>Hola jQuery!</h1>
+        </div>
+    </body>
+</html>

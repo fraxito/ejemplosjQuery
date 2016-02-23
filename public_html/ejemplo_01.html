@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>ejemplo 01 selecciona</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-1.12.0.min.js"></script>
+        <script>
+            function borra(){
+                $('.seleccionado, #parrafo1').fadeToggle(400);
+            }
+            
+            function pares(){
+                $('li:even').css('background-color','#002E62');
+                $('li:odd').css('background-color','#FF9800');
+            }
+            function impares(){
+                $('li:odd').css('background-color','#002E62');
+                $('li:even').css('background-color','#FF9800');
+            }            
+        </script>
+    </head>
+    <body>
+        <input type="button" value="ejemplo jQuery" onclick="borra();"/>
+        <input type="button" value="PARES" onclick="pares();"/>
+        <input type="button" value="IMPARES jQuery" onclick="impares();"/>
+        
+        <div id="mensaje">
+            <h1>Hola jQuery!</h1>
+            <p id="parrafo1"> esto es el párrafo 1</p>
+            <p id="parrafo2" > esto es el párrafo 2</p>
+            <p id="parrafo3" class="seleccionado"> esto es el párrafo 3</p>
+            
+            <ul>
+                <li> valor 1</li>
+                <li> valor 2</li>
+                <li> valor 3</li>
+                <li> valor 4</li>
+                <li> valor 5</li>
+                <li> valor 6</li>
+                <li> valor 7</li>
+                <li> valor 8</li>
+                <li> valor 9</li>
+            </ul>
+        </div>
+    </body>
+</html>
