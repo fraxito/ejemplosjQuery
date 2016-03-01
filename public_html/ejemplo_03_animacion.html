@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .caja{
+                position: absolute;
+                background-color: #fe0;
+                width: 64px;
+                height: 64px;
+            }
+        </style>
+        
+        <script src="js/jquery-1.12.0.min.js"></script>
+        <script>
+            function animacion(){
+                console.log("si");
+                $('#mensaje').animate({
+                    left: '+=50'
+                }, 800);
+            }
+        //document.ready se ejecuta cuando ha terminado de cargar la página
+        $(document).ready(function(){
+            $('.caja').click(function(){
+                $(this).animate({
+                    left: '+=50',
+                    top : '+=50'
+                }, 800);
+            });
+        });
+        
+        
+
+        </script>
+    </head>
+    <body>
+        <input type="button" value="ejemplo animacion" onclick="animacion();"/>
+
+        <div id="mensaje" class="caja">
+            <h5>Hola jQuery!</h5>
+        </div>
+        
+        <div id="mensaje2" class="caja">
+            <h5>Hola jQuery!</h5>
+        </div>        
+    </body>
+</html>
